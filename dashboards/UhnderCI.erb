@@ -1,7 +1,7 @@
 <script type='text/javascript'>
  $(function() {
 
-   Dashing.widget_base_dimensions = [370, 340]
+   Dashing.widget_base_dimensions = [370, 280]
    Dashing.numColumns = 5
    Dashing.numRows = 5
  });
@@ -10,44 +10,58 @@
  <% content_for :title do %>Uhnder Chennai Jenkins Dashboard<% end %>
 <div class="gridster">
   <ul>
+
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-view="Image" data-image="/uhnder.png"></div>
     </li>
-    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="buildstatus" data-view="Number" data-title="Build" data-moreinfo=" "  data-prefix="OK" style="font-size: 36px; background-color: #6dcf9c"></div>
+      <i class="fa fa-code icon-background" style="font-size:180px"></i>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="teststatus" data-view="Number" data-title="Test" data-moreinfo=" "  data-prefix="OK" style="font-size: 36px; background-color: #3d6cb8"></div>
+      <i class="fa fa-cube icon-background" style="font-size:180px"></i>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="deploystatus" data-view="Number" data-title="Deploy" data-moreinfo=" "  data-prefix="OK" style="font-size: 36px; background-color: #9d3db8"></div>
+      <i class="fa fa-archive icon-background" style="font-size:180px"></i>
+    </li>
+<!--    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
       <div data-id="welcome" data-view="Text" data-title="Uhnder CI/CD Dashboard" data-text="This is Uhnder Jenkins Job Monitor" data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
-<!--
+
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="synergy" data-view="Meter" data-title="Synergy" data-height="200" data-width="200" data-min="0" data-max="100" data-suffix="%"></div>
     </li>
-
-
 -->
-
-
 <!--
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="widget-jenkins_job">
       <div data-id="JobDisp" data-view="JenkinsJob" data-bind-class="result | append additionalclass" data-additionalclass=" widget"></div>
     </li>-->
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
       <div data-id="tjobs" data-view="Number" data-title="Total Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px"></div>
-
-
     <!--  <i class="fa fa-archive icon-background"></i> -->
     </li>
     <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
-      <div data-id="sjobs" data-view="Number" data-title="Success Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #42f563"></div>
-      <div data-id="fjobs" data-view="Number" data-title="Failed Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #f5428d"></div>
+      <div data-id="sjobs" data-view="Number" data-title="Success Jobs" data-prefix="#" style="font-size: 36px; background-color: #42f563"></div>
+    </li>
+    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="fjobs" data-view="Number" data-title="Failed Jobs" data-prefix="#" style="font-size: 36px; background-color: #f5428d"></div>
+    </li>
+    <li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="fa fa-clock-o icon-background" style="font-size:128px"></i>
     </li>
 <!--    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
       <div data-id="fjobs" data-view="Number" data-title="Failed Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #f5428d"></div>
     </li>-->
 
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="2">
       <div data-id="jenkinsBuildStatus" data-view="JenkinsBuildStatus" data-title="Jobs failed" style="font-size: 24px; background-color: "></div>
     </li>
-    <li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
-      <div data-id="jobspassed" data-view="List" data-unordered="true" data-title="Jobs Passed" data-moreinfo=""></div>
+    <li data-row="2" data-col="3" data-sizex="2" data-sizey="2">
+      <div data-id="jobspassed" data-view="List" data-unordered="true" data-title="TO DO" data-moreinfo=""></div>
+      <i class="fa fa-tasks icon-background" style="font-size:128px"></i>
     </li>
   </ul>
   <center><div style="font-size: 18px"> All rights reserved</div></center>
