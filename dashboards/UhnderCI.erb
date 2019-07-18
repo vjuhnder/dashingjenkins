@@ -1,0 +1,54 @@
+<script type='text/javascript'>
+ $(function() {
+
+   Dashing.widget_base_dimensions = [370, 340]
+   Dashing.numColumns = 5
+   Dashing.numRows = 5
+ });
+ </script>
+
+ <% content_for :title do %>Uhnder Chennai Jenkins Dashboard<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-image="/uhnder.png"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Uhnder CI/CD Dashboard" data-text="This is Uhnder Jenkins Job Monitor" data-moreinfo="Protip: You can drag the widgets around!"></div>
+    </li>
+<!--
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="Synergy" data-height="200" data-width="200" data-min="0" data-max="100" data-suffix="%"></div>
+    </li>
+
+
+-->
+
+
+<!--
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="widget-jenkins_job">
+      <div data-id="JobDisp" data-view="JenkinsJob" data-bind-class="result | append additionalclass" data-additionalclass=" widget"></div>
+    </li>-->
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="tjobs" data-view="Number" data-title="Total Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px"></div>
+
+
+    <!--  <i class="fa fa-archive icon-background"></i> -->
+    </li>
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="sjobs" data-view="Number" data-title="Success Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #42f563"></div>
+      <div data-id="fjobs" data-view="Number" data-title="Failed Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #f5428d"></div>
+    </li>
+<!--    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="fjobs" data-view="Number" data-title="Failed Jobs" data-moreinfo=" "  data-prefix="#" style="font-size: 36px; background-color: #f5428d"></div>
+    </li>-->
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="jenkinsBuildStatus" data-view="JenkinsBuildStatus" data-title="Jobs failed" style="font-size: 24px; background-color: "></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
+      <div data-id="jobspassed" data-view="List" data-unordered="true" data-title="Jobs Passed" data-moreinfo=""></div>
+    </li>
+  </ul>
+  <center><div style="font-size: 18px"> All rights reserved</div></center>
+</div>
