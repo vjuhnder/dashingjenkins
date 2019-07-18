@@ -1,1 +1,3 @@
-Check out http://shopify.github.com/dashing for more information.
+#Jenkins Dashboard Example
+
+This is an demo dashboard made using http://dashing.io for Jenkins CI
